@@ -1,0 +1,35 @@
+.inhouse .link-item {
+  border: black solid;
+  /*display: inline-block;*/
+  width: 30%;
+  flex-grow: 1;
+  margin:.5%;
+}
+.external .link-item {
+  border: black solid;
+  /*display: inline-block;*/
+  width: 23%;
+  /*flex: 1;*/
+  flex-grow: 1;
+  margin:.5%;
+}
+
+.link-container ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+/*.link-container.inhouse ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.link-container.external ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+*/

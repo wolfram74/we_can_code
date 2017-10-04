@@ -1,10 +1,11 @@
 console.log('templates loaded')
 Vue.component('inhouse-links',{
   template:`
-  <div class='link-container'>
+  <div class='link-container inhouse'>
     <h3>Exercises and Articles from participants of the Workshop</h3>
     <ul>
       <link-item v-for='(linkData, index) in inhouseLinks'
+      v-if='linkData.link != "NA"'
       v-bind:linkData=linkData
       v-bind:key=index>
       </link-item>
@@ -17,10 +18,11 @@ Vue.component('inhouse-links',{
 
 Vue.component('external-links',{
   template:`
-  <div class='link-container'>
+  <div class='link-container external'>
     <h3>Exercises and Articles from outside of the Workshop</h3>
     <ul>
       <link-item v-for='(linkData, index) in externalLinks'
+      v-if='linkData.link != "NA"'
       v-bind:linkData=linkData
       v-bind:key=index>
       </link-item>
@@ -39,7 +41,7 @@ Vue.component('link-item',{
         {{linkData.title}}
       </a>
     </h3>
-    <p>{{linkData.description}}</p>
+    <p v-html=linkData.description></p>
   </li>
   `,
   props: ['linkData']
