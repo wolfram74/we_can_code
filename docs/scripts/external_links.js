@@ -134,5 +134,4 @@ const externalLinks = [
     submitter: `NA`,
     author: `NA`
   },
-
 ]
